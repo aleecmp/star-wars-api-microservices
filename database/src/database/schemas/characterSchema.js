@@ -49,6 +49,4 @@ characterSchema.statics.delete = async function (id) {
     return await this.findByIdAndDelete(id);
 };
 
-
-
 module.exports = characterSchema;
