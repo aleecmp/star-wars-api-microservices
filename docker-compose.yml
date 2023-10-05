@@ -1,6 +1,6 @@
 version: '3'
 
-service:
+services:
   gateway:
     container_name: gateway
     restart: always
@@ -14,6 +14,20 @@ service:
     build: ./characters
     ports:
       - "8001:8001"
+  
+  films:
+    container_name: films
+    restart: always
+    build: ./films
+    ports: 
+      - "8002:8002"
+
+  planets:
+    container_name: planets
+    restart: always
+    build: ./planets
+    ports: 
+      - "8003:8003"
 
   database:
     container_name: database
