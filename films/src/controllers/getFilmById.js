@@ -2,6 +2,7 @@ const Film = require("../data");
 const { response } = require("../utils");
 
 module.exports = async (req, res) => {
-    const film = await Film.find();
+    const { id } = req.params;
+    const film = await Film.find(id);
     response(res, 200, film);
 };

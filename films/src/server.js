@@ -6,7 +6,7 @@ const server = express();
 server.use(express.json());
 server.use(morgan("dev"));
 
-server.use("./films", require("./routes"));
+server.use("/films", require("./routes"));
 
 server.use("*", (req, res) => res.status(404).json({
     error: true,
