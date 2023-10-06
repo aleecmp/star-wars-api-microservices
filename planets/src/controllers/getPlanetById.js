@@ -2,6 +2,7 @@ const Planet = require("../data");
 const { response } = require("../utils");
 
 module.exports = async (req, res) => {
-    const planet = await Planet.find();
+    const { id } = req.params
+    const planet = await Planet.find(id);
     response(res, 200, planet);
 };
