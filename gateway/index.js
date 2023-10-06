@@ -11,12 +11,12 @@ app.use("/characters", createProxyMiddleware({
     changeOrigin: true,
 }));
 
-app.use("/characters", createProxyMiddleware({
+app.use("/films", createProxyMiddleware({
     target: "http://films:8002",
     changeOrigin: true,
 }));
 
-app.use("/characters", createProxyMiddleware({
+app.use("/planets", createProxyMiddleware({
     target: "http://planets:8003",
     changeOrigin: true,
 }));
